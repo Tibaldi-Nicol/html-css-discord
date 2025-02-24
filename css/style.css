@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: auto;
 }
 
 body {
@@ -29,7 +30,7 @@ header{
 /*è il contenutore del box login arancione qui metto le regole flexbox per controllarlo*/
 
 .logo-flex{
-    background-color: lightblue;
+    background-color: #255EE9;
     height: 100px;
     display: flex;
     justify-content: center;
@@ -67,10 +68,20 @@ header{
 }
 
 .box-login-1{
-    background-color: orange;
-    height: 60px;
+    background-color:#255EE9;
+    
     width: 468px;
+    /*
     border-style: dotted;
+    */
+    
+    background-image: url(../img/logo.svg);
+    background-image: no-repeat;
+
+    background-size: cover;
+    background-size: 60%   60%;
+    background-position: center;
+
   
 
  
@@ -110,14 +121,39 @@ header{
     height: 500px;
     justify-content: center;
     align-items: center;
+    background-image: url(../img/jumbo.png);
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    line-height: 1.5;
+   
+}
+
+h1{
+    font-size: 3rem;
+    margin: 40px;
+    
+    
+    
+
+
+}
+
+.paragraph-h1{
+    font-size: 1.5rem;
+
+   
 }
 
 /*riquadro rosa*/
 .header-main-content{
-    background-color: palevioletred;
+    background-color: transparent;
     height: 400px;
     width: 900px;
-    border-style: dotted;
+    color: white;
+    
+    text-align: center;
+    align-content: center;
 
 }
 
