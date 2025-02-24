@@ -1,513 +1,199 @@
-/* CSS Reset */
-* {
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
+    /*include padding e margin nell'alytezza che noi decidiamo e rimane tale*/
     box-sizing: border-box;
-    cursor: auto;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
+/*il container lo uso per non far sbordare i contenuti*/
+/*utilizzare piu possibile l'eredita dell'altezza*/
+/*non usando flex potevo centrare con margin 0 auto in orizzontale*/
+
+/*generics*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
-.container {
+/* utilies*/
+/*sono classi monotematiche che fanno qualcosa che serve*/
+
+.container{
     max-width: 1200px;
     margin: 0 auto;
-   
 }
 
 
-/* header do il colore e laltezza essendo senza contenuto*/
+/*quando voglio che qualcosa sia flex uso questo*/
+.flex{
+    display: flex;
+}
+/*uso questa per impostare la massima altezza dove serve */
+.h-100{
+    height: 100%;
+}
 
+/*centralizzo i trattini per far vedere il bordo*/
+.border{
+    border: 2px dashed black;
+}
+
+.bg-gray{
+    background-color: lightgray;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+
+/*per cambiare in automatico senza cambiare a mano in html
+al momento dipendente dalla classe flex*/
+.flex.reverse{
+   flex-direction: row-reverse;   
+}
+
+/*header*/
 header{
-    height: 600px;
-    background-color: blue;
-    
-
-}
-
-/*è il contenutore del box login arancione qui metto le regole flexbox per controllarlo*/
-
-.logo-flex{
-    background-color: #255EE9;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-/*vero e proprio login*/
-
-.login{
-
-    background-color: orange;
-    height: 60px;
-     max-width: 1400px;
-    display: flex;
-
-
-    /*
-    margin-left: 150px;
-    margin-right: 150px;
-    */
-
-
-} 
-
-/*riquadri interni al login divisi per inserire testo*/
-.box-login{
-    display: flex;
-    text-align: left;
-    line-height: 60px;
-    font-size: larger;
-    padding: 0;
-    margin: 0;
-    
-   
-    
-
-}
-
-.box-login-1{
-    background-color:#255EE9;
-    
-    width: 468px;
-    /*
-    border-style: dotted;
-    */
-    
-    background-image: url(../img/logo.svg);
-    background-repeat: no-repeat;
-    
-    background-size: cover;
-    background-size: 60%   60%;
-    background-position: center;
-    padding: 0;
-    margin: 0;
-
-  
-
- 
-
-}
-
-
-
-.box-login-2{
-    
-    background-color: #255EE9;
-    flex-direction: row;
-    
-    
-    
-    
-   
-    
- 
-
-}
-ul{
-    
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: white;
-    gap: 25px;
-    
-  
-    
-    
-}
-.box-login-3{
-    background-color: orange(164, 144, 238);
-    height: 60px;
-    width: 468px;
-    
-    border-style: dotted;
-    
- 
-
-}
-
-/*fine login*/
-
-
-/*sezione che racchiude il riquadro rosa per controllarlo con flexbox*/
-
-/*avendo preso la misura di header in altezza 600px devo riportare laltezza meno i 100 px del logo-login in modo che la section possa centrarsi*/
-
-.header-main{
-    display: flex;
-    height: 500px;
-    justify-content: center;
-    align-items: center;
-    background-image: url(../img/jumbo.png);
-    background-position: center top;
-    background-size: cover;
-    background-repeat: no-repeat;
-    line-height: 1.5;
-   
-}
-
-h1{
-    font-size: 3rem;
-    margin: 40px;
-    
-    
-    
-
-
-}
-
-.paragraph-h1{
-    font-size: 1.5rem;
-
-   
-}
-
-/*riquadro rosa*/
-.header-main-content{
-    background-color: transparent;
-    height: 400px;
-    width: 900px;
-    color: white;
-    
-    text-align: center;
-    align-content: center;
-
-}
-
-/*fine header*/
-
-/*per il main content 1 uso le stesse misure dell'header in modo da centrare bene i riquadri interni*/
-
-.main-content-1{
-    display: flex;
-    height: 600px;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    
-}
- 
-
-/*usato per vedere il risultato e limpostazione lascio commentato in caso di necessita*/
-.main-content-1-box{
-    width: 1200px;
-    height: 500px;
-    border-style: dotted;
-    display: flex;
-    
-    
-}
-
-/*dentro al riquadro box ci sono altri due riquadri per 2 contenuti diversi*/
-
-/*flex-grow il mio elemento puo allargarsi (1) flex-shrink autorizzazione a stringersi no (0)*/
-
-/*blu*/
-
-.main-content-1-box-blue{
     background-color: lightblue;
-    flex-grow: 1;
-    flex-shrink: 0;
-    height: 100%;
-    width: 65%;
-    border-style: dotted;
-    
-   
-}
-
-/*rosa*/
-.main-content-1-box-rosa{
-    background-color: palevioletred;
-    height: 100%;
-    width: 35%;
-    flex-grow: 1;
-    flex-shrink: 0;
-    border-style: dotted;
     
 }
-
-/*fine main content 1*/
-
-
-/*inizio main content 2 */
-
-
-
-.main-content-2{
-    display: flex;
-    height: 600px;
-    justify-content: center;
-    align-items: center;
-    background-color: #D3D3D3;
-    
-}
-
-
-/*usato per vedere il risultato e limpostazione lascio commentato in caso di necessita*/
-.main-content-2-box{
-    width: 1200px;
-    height: 500px;
-    border-style: dotted;
-    display: flex;
-    
-    
-}
-
-/*dentro al riquadro box ci sono altri due riquadri per 2 contenuti diversi*/
-
-/*flex-grow il mio elemento puo allargarsi (1) flex-shrink autorizzazione a stringersi no (0)*/
-
-/*blu*/
-
-.main-content-2-box-blue{
-    background-color: lightblue;
-    flex-grow: 1;
-    flex-shrink: 0;
-    height: 100%;
-    width: 35%;
-    border-style: dotted;
-    
-   
-}
-
-/*rosa*/
-.main-content-2-box-rosa{
-    background-color: palevioletred;
-    height: 100%;
-    width: 65%;
-    flex-grow: 1;
-    flex-shrink: 0;
-    border-style: dotted;
-    
-}
-
-/*fine main content 2*/
-
-/*inizio-main content 3*/
-
-.main-content-3{
-    display: flex;
-    height: 600px;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    
-}
- 
-
-
-.main-content-3-box{
-    width: 1200px;
-    height: 500px;
-    border-style: dotted;
-    display: flex;
-    
-    
-}
-
-/*dentro al riquadro box ci sono altri due riquadri per 2 contenuti diversi*/
-
-/*flex-grow il mio elemento puo allargarsi (1) flex-shrink autorizzazione a stringersi no (0)*/
-
-/*blu*/
-
-.main-content-3-box-blue{
-    background-color: lightblue;
-    flex-grow: 1;
-    flex-shrink: 0;
-    height: 100%;
-    width: 65%;
-    border-style: dotted;
-    
-   
-}
-
-/*rosa*/
-.main-content-3-box-rosa{
-    background-color: palevioletred;
-    height: 100%;
-    width: 35%;
-    flex-grow: 1;
-    flex-shrink: 0;
-    border-style: dotted;
-    
-}
-
-/*fine main content 3*/
-
-/*inizio main content 4 verde*/
-
-.main-content-4-verde{
-    display: flex;
-    height: 1200px;
-    justify-content: center;
-    align-items: center;
-    background-color: #D3D3D3;
-}
-
-.verde{
-    width: 1200px;
-    height: 1000px;
-    border-style: dotted;
-    display: flex;
-    background-color: green;
-}
-
-/*fine main content 4 verde*/
-
-/*inizio main content contenuti divisi footer*/
-
-.footer-content-black{
-    display: flex;
-    height: 600px;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: #23272A;
-    
-}
-/*non centro il box come da screen (esercizio assegnato)*/
-.footer-content-black-box{
-
-    height: 500px;
-    width: 1200px;
-    border-style: dotted;
-    margin: 40px;
-    display: flex;
-    justify-content: space-between;
-
-
-}
-
-.footer-content-black-box-1{
-    height: 100%;
-    width: 18%;
-    flex-grow: 1;
-   
-    background-color: pink;
-    border-style: dotted;
-}
-
-.footer-content-black-box-2{
-    height: 100%;
-    flex-grow: 1;
-    border: 2px dashed white;
-    
-    background-color: #20B3AA;
-    
-}
-
-.footer-content-black-box-3{
-    height: 100%;
-    flex-grow: 1;
-    border: 2px dashed white;
-   
-    background-color: #20B3AA;
-}
-
-.footer-content-black-box-4{
-    height: 100%;
-    flex-grow: 1;
-    background-color: #20B3AA;
-    border: 2px dashed white;
-}
-
-.footer-content-black-box-5{
-    height: 100%;
-    flex-grow: 1;
-    border: 2px dashed white;
-    
-    background-color: #20B3AA;
-}
-
-/*fine main content contenuti divisi footer*/
-
-/*inizio  real footer*/
-
-#divisorio{
-    height: 2px;
-    width: max-content;
-    background-color: white;
-
-}
-
-
-.real-footer{
-    display: flex;
-    height: 100px;
-    
-    justify-content: center;
-    align-items: flex-end;
-   
-    background-color: #23272A;
-    
-}
-
-.footer-content{
-
+/*header essendo vuoto prende l'altezza della navbar*/
+/*per mettere gli elemnti allineati la faccio diventare flex*/
+/*la navbar potendo avere altezza fissa si puo lasciare*/
+.navbar{
     height: 80px;
-    width: 1200px;
-    background-color: #7FFFD5;
-
-
-
-
-
-}
-
-.footer-box-flex{
     display: flex;
-    justify-content: space-between;
+    /*gli elementi si centrano nel loro contenitore e lasciano aria alla navbar completa*/
     align-items: center;
+    justify-content: space-between;
+    
+}
+/*tutti i figli diretti di navbar quindi i suoi elementi*/
+.navbar > * {
+    /*flex basis la dimensione di base dell'elemento*/
+    flex-basis: 20%;
+    padding: 10px 0;
+    background-color: orange;
+
+}
+/*prendi tutto lo psazio disponibile*/
+.navbar-menu{
+    flex-grow: 1;
+    /*essendo semplice testo psso usare text-align*/
     text-align: center;
-    line-height: 40px;
-   
-    font-size: medium;
+}
+
+.navbar-azioni{
+    text-align: right;
+}
+
+/*centrare jumbotron*/
+/*l'altezza fissa al background puo andare bene per centrare il contenuto*/
+
+.jumbotron{
+
+    height: 500px;
+    background-color: rgb(0, 8, 255);
+    /*per lasciare aria*/
+    padding: 60px 0;
+    /*attivo flex e centro il quadrato rosa*/
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /*default*/
+
+}
+
+/*riquadro del jumbotron dove ci vanno le scritte*/
+
+.jumbotron-content{
+    background-color: pink;
+    /*prende il 50% del jumbotron*/
+    /*non metto l'altezza perche di default ce strech*/
+    width: 50%;
+    
+
+
+    
+
+}
+
+
+
+/*section*/
+/*4 sezioni una sotto l'altra che cambiano per colore */
+section{
+    /*regolo poi l'altezza in base al contenuto*/
+    height: 600px;
+    padding: 60px 0;
+}
+/*classi paelanri quindi un riquadro piu grande e uno piu piccolo*/
+.large-col{
+    flex-basis: 60%;
+    background-color: aqua;
+}
+
+.small-col{
+    flex-basis: 40%;
+    background-color: pink;
+}
+
+.full-col{
+    flex-basis: 100%;
+    background-color: darkgreen;
+}
+
+/*footer*/
+/*altezza la decideranno i contenuti avrndfo altezza diversa anche tra loro*/
+footer{
+    background-color: rgb(4, 26, 46);
+    padding: 50px 0;
+    color: white;
+}
+
+.footer-top{
+
+    height: 600px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid purple;
+    /*hop usato la utilies flex nel div footer top*/
+    display: flex;
+
+}
+
+.footer-left{
+    background-color: lightcoral;
+
+    flex-basis: 30%;
+
+}
+
+.footer-right{
+    background-color: aquamarine;
+
+    flex-basis: 70%;
+
+}
+
+.footer-nav{
     height: 100%;
-    width: 100%;
-    
+    display: flex;
 }
 
-.footer-box-2{
-    height: 35px;
-    width: 100px;
-    background-color: pink;
-    outline: 3px dashed black;
-  
-    
-   
-    
-
+.footer-nav > * {
+    flex-basis: 25%;
+    border-color: white;
 }
 
-
-.footer-box-1{
-    height: 35px;
-    width: 100px;
-    background-color: pink;
-    outline: 3px dashed black;
-    
-    
-    
+.footer-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.footer-bottom > * {
+    padding: 5px 10px;
+    background-color: lightcoral;
+}

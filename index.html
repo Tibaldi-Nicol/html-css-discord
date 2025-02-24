@@ -1,207 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+
     <meta charset="UTF-8">
+
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord-completo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>Struttura-Discord-2</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+
 </head>
+
 <body>
-    
-<div class="container-flex">
-    <!-- Header -->
-    <header>
-
-        <!--creo la sezione logo, che si occupera di creare la navbar arancione per usare flexbox-->
-
-        <section class="logo-flex">
-
-            <!--Per la parte di login arancione-->
-
-            <div class="login">
-
-                <!--creo la sezione login per usare flexbox-->
-
-                <div class="box-login">
-
-                    <!--box interni per creare i trattini intorno alla sezione login-->
-
-                  <div class="box-login-1"></div>
 
 
-                  <div class="box-login-2">
-                    <ul>
-                        <li>Scarica</li>
-                    
-                        <li>Perchè Discord</li>
-                        <li>Nitro</li>
-                        <li>Sicurezza</li>
-                        <li>Assistenza</li>
-                    </ul>
-                  </div>
+    <!--header-->
+<header>
+
+    <!--navbar perche è tutto cliccabile-->
+    <!--posso affiancare piu classi per arrivare a l'effetto desiderato-->
+    <nav class="navbar container border">
+
+        <nav class="navbar-logo border">logo</nav>
+        <nav class="navbar-menu border">link link link link</nav>
+        <nav class="navbar-azioni border">button</nav>
 
 
+    </nav>
+
+    <!--jumbotron-->
+
+    <div class="jumbotron">
+
+     <!--occupa il 50% della pagina e mi conviene centrare lui-->
+
+        <div class="jumbotron-content border"></div>
+
+    </div>
+</header>
 
 
-                  <div class="box-login-3"><h4>login</h4></div>
+<!--contenuto principale diviso con section-->
 
-                 </div>
+<main>
+    <!--bg utilies colore in modo da poterlo usare se serve-->
+    <!--ho creato un riquadro in section mettendo il container dentro section e ho diviso la sua grandezza in 60 e 40 % dividendo il colore il tutto in due div cosi da dividere il contenuto se necessario-->
 
-            </div>
+    <section class="bg-white">
+        <!--uso la utilies flex in modo che mi fa si da container che ho gia creato ma in questa singola parte o dove mi serve diventa anche flex-->
+    <div class="container flex h-100 border">
+        <div class="large-col"></div>
+        <div class="small-col"></div>
+    </div>
+    </section>
 
-        </section>
+<!--uguale ma a colori invertiti-->
+    <section class="bg-gray">
 
-        <!--semple in header creo il contenuto rosa -->
-
-
-        <section class="header-main">
-
-
-            <div class="header-main-content">
-
-
-                <h1>Il tuo posto per parlare</h1>
-
-                <p class="paragraph-h1">Che tu faccia parte di un club scolastico, gruppo di gamer, 
-                    comunità artistica o gruppo di amici, che vuole passare il
-                    tempo assieme, Discord rende piu facile chiacchierare ogni giorno e ritrovarsi piu spesso
-                </p>
-
-            
-
-             </div>
-
-        </section>
-
-
-    </header>
-
-    <!-- Main -->
-
-    <!--main content 1 (bianco) racchiude il riquadro blu e rosa-->
-
-    <main>
-
-        <section class="main-content-1">
-
-        <!--il div ha il riquadro al suo interno-->
-
-        <div class="main-content-1-box">
-
-            <!--dove posso inserire altri elementi in due box interni che si dividono il main content -->
-
-            <div class="main-content-1-box-blue"></div>
-            <div class="main-content-1-box-rosa"></div>
-
+        <div class="container flex reverse h-100 border">
+            <div class="large-col"></div>
+            <div class="small-col"></div>
         </div>
+    </section>
+
+    <section class="bg-white">
+        <div class="container flex h-100 border">
+            <div class="large-col"></div>
+            <div class="small-col"></div>
+        </div>
+    </section>
 
 
-        </section>
+    <section class="bg-gray">
+        <div class="container flex h-100 border">
+            <div class="full-col"></div>
+            
+        </div>
+    </section>
+</main>
 
-        <!--essendo lo stesso principio ricopio quello gia fatto e cambio le percentuali di colore ai box interni con i loro nomi dove necessario-->
+<!--Footer-->
+<footer>
+    <div class="container">
 
-        <section class="main-content-2">
-
-
-
-             <!--il div ha il riquadro al suo interno-->
-
-             <div class="main-content-2-box">
-
-                <!--dove posso inserire altri elementi in due box interni che si dividono il main content -->
-    
-                <div class="main-content-2-box-blue"></div>
-                <div class="main-content-2-box-rosa"></div>
-    
+        <div class="footer-top">
+            <div class="footer-left border"></div>
+            <!--va diviso in altre 4 sezioni-->
+            <div class="footer right border">
+              <nav class="footer-nav ">
+                <div class="nav-col border"></div>
+                <div class="nav-col border"></div>
+                <div class="nav-col border"></div>
+                <div class="nav-col border"></div>
+              </nav>  
             </div>
+        </div>
+        <div class="footer-bottom">
+            <div>logo</div>
+            <div>link</div>
+        </div>
+      
+    </div>
+</footer>
 
 
-        </section>
-
-        <!--main content3-->
-
-        <section class="main-content-3">
-
-
-
-            <!--il div ha il riquadro al suo interno-->
-
-            <div class="main-content-3-box">
-
-               <!--dove posso inserire altri elementi in due box interni che si dividono il main content -->
-   
-               <div class="main-content-3-box-blue"></div>
-               <div class="main-content-3-box-rosa"></div>
-   
-           </div>
-
-
-       </section>
-
-         <!--main content4 verde contenuto grande-->
-
-            <section class="main-content-4-verde">
-
-                <div class="verde"></div>
-
-            </section>
-
-        
-
-    </main>
-
-    <!-- Footer -->
-
-    <footer class="footer-flex">
-<!--cosa ce di sfondo al contenuto diviso in piu parti e sara il padre flexbox-->
-        <section class="footer-content-black">
-
-            <!--creo la sezione footer-content-black-box dove dentro ci saranno i riquadri divisi-->
-
-            <div class="footer-content-black-box">
-
-                <!--creo i box interni per dividere il contenuto-->
-
-                <!--tutti diversi in modo da poter cambiare contenuto-->
-
-                <div class="footer-content-black-box-1"></div>
-                <div class="footer-content-black-box-2"></div>
-                <div class="footer-content-black-box-3"></div>
-                <div class="footer-content-black-box-4"></div>
-                <div class="footer-content-black-box-5"></div>
-
-               
-
-            </div>
-
-        </section>
-
-        <div id="divisorio"></div>
-
-        <section class="real-footer">
-
-            <div class="footer-content"> 
-
-                <div class="footer-box-flex">
-
-                <!--creo i box interni per dividere il contenuto-->
-                <div class="footer-box-1">Logo</div>
-                <div class="footer-box-2">Bottone</div>
-                </div>
-            </div>
-
-
-
-
-        </section>
-
-
-    </footer>
-
-</div>
-
-  
 </body>
+
 </html>
