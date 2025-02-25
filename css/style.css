@@ -263,7 +263,29 @@ h3{
     text-align: center;
 }
 
-.bottone-ultima-sezione
+.bottone-ultima-sezione{
+    text-align: center;
+    width: fit-content;
+   
+    margin-top: 50px;
+    background-color: #7289DA;
+    
+   margin-left: 41%;
+    border-radius: 50px;
+    font-size: 2rem;
+    margin-bottom: 60px;
+   
+
+    
+    
+ 
+}
+
+#scarica{
+    padding: 40px;
+}
+
+
 
 
 /*footer*/
