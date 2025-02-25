@@ -340,5 +340,9 @@ footer{
 
 .footer-bottom > * {
     padding: 5px 10px;
-    background-color: lightcoral;
+    
+}
+#registrati{
+    background-color: #7D91DB;
+    border-radius: 30px;
 }
