@@ -307,14 +307,33 @@ footer{
 }
 
 .footer-left{
-    background-color: lightcoral;
+    
+    font-size: 2.5rem;
+    color: #7289DA;
+    margin-top: 20px;
+
 
     flex-basis: 30%;
 
 }
+h4{
+    font-size: 1rem;
+    color: #7289DA;
+}
+
+ul{
+
+    list-style: none;
+    padding: 15px;
+    
+}
+
+li{
+    padding: 15px;
+}
 
 .footer-right{
-    background-color: aquamarine;
+   
 
     flex-basis: 70%;
 
@@ -346,3 +365,21 @@ footer{
     background-color: #7D91DB;
     border-radius: 30px;
 }
+/*
+.border{
+    border: dashed black;
+}
+    */
+
+    .icone{
+        padding-top: 70px;
+        color: white;
+        font-size: 30px;
+
+    }
+
+    .nazionalita{
+        padding-top: 30px;
+        color: white;
+        font-size: medium;
+    }
